@@ -41,6 +41,9 @@ body {
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
+  /* keep blur contained so it doesn't bleed onto text */
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 70% 30%, black 60%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 80% at 70% 30%, black 60%, transparent 100%);
 }
 
 .hero-blobs canvas {
