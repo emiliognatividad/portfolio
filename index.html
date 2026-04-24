@@ -13,8 +13,8 @@
   --glass: rgba(255,255,255,0.03);
   --glass-border: rgba(255,255,255,0.07);
   --glass-hover: rgba(255,255,255,0.055);
-  --text: #d8d4ce;
-  --muted: rgba(210,205,198,0.35);
+  --text: #edeae4;
+  --muted: rgba(220,216,210,0.55);
   --accent: rgba(220,215,210,0.7);
   --mono: 'DM Mono', monospace;
   --display: 'Bebas Neue', sans-serif;
@@ -29,32 +29,25 @@ body {
   font-family: var(--sans);
   font-weight: 300;
   overflow-x: hidden;
-  cursor: none;
+  
 }
 
-/* custom cursor */
-.cursor {
-  position: fixed;
-  width: 6px;
-  height: 6px;
-  background: rgba(220,215,210,0.8);
-  border-radius: 50%;
+
+
+
+.hero-blobs {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s ease;
+  overflow: hidden;
 }
 
-.cursor-ring {
-  position: fixed;
-  width: 28px;
-  height: 28px;
-  border: 1px solid rgba(220,215,210,0.25);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%, -50%);
-  transition: all 0.18s ease;
+.hero-blobs canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* deep background atmosphere */
@@ -123,7 +116,8 @@ nav {
 .nav-links a:hover { color: var(--text); }
 
 /* HERO */
-.hero { background: url("bg.png") center center / cover no-repeat;
+.hero {
+  background: #080808;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -147,7 +141,7 @@ nav {
   font-size: clamp(80px, 11vw, 148px);
   line-height: 0.88;
   letter-spacing: 0.015em;
-  color: rgba(255,255,255,0.92);
+  color: rgba(255,255,255,0.97);
   margin-bottom: 36px;
 }
 
@@ -182,7 +176,7 @@ nav {
   text-decoration: none;
   border-radius: 100px;
   transition: all 0.3s ease;
-  cursor: none;
+  
   border: none;
   white-space: nowrap;
 }
@@ -343,14 +337,14 @@ nav {
 
 .card-copy p {
   font-size: 13px;
-  color: rgba(210,205,198,0.55);
+  color: rgba(220,216,210,0.75);
   line-height: 2;
   margin-bottom: 12px;
   font-weight: 300;
 }
 
 .card-copy p:last-child { margin-bottom: 0; }
-.card-copy strong { color: rgba(210,205,198,0.85); font-weight: 400; }
+.card-copy strong { color: rgba(235,232,228,0.95); font-weight: 400; }
 
 .card-metrics {
   padding: 36px 32px;
@@ -426,12 +420,12 @@ nav {
 
 .ab-text {
   font-size: 13px;
-  color: rgba(210,205,198,0.55);
+  color: rgba(220,216,210,0.75);
   line-height: 2;
   font-weight: 300;
 }
 
-.ab-text strong { color: rgba(210,205,198,0.85); font-weight: 400; }
+.ab-text strong { color: rgba(235,232,228,0.95); font-weight: 400; }
 
 .about-right { display: flex; flex-direction: column; gap: 2px; }
 
@@ -628,7 +622,7 @@ footer p {
 @media (max-width: 900px) {
   nav { padding: 16px 24px; }
   .nav-links { gap: 20px; }
-  .hero { background: url("bg.png") center center / cover no-repeat; padding: 0 24px 64px; }
+  .hero { padding: 0 24px 64px; }
   .wrap { padding: 64px 24px; }
   .card-top { grid-template-columns: 1fr; padding: 24px; }
   .card-btns { flex-direction: row; }
@@ -652,9 +646,6 @@ footer p {
 </head>
 <body>
 
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="ring"></div>
-
 <nav>
   <span class="nav-id">Diego Emilio Guerrero</span>
   <ul class="nav-links">
@@ -667,7 +658,7 @@ footer p {
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <div class="hero-eyebrow">San Luis Potosi, Mexico / Open to internships 2025</div>
+  <div class="hero-blobs"><canvas id="blob-canvas"></canvas></div>
   <h1><span class="dim">DIEGO<br>EMILIO<br></span>GUERRERO</h1>
   <p class="hero-sub">
     Intelligent Systems Engineering student.<br>
@@ -809,17 +800,8 @@ footer p {
       </div>
       <div>
         <div class="ab-lbl">Currently</div>
-        <p class="ab-text">Building projects around automation, data systems, and cloud infrastructure. Looking for a software engineering or data internship for 2025.</p>
+        <p class="ab-text">Building projects around automation, data systems, and cloud infrastructure. Looking for a software engineering or data internship for 2026.</p>
       </div>
-    </div>
-    <div class="about-right">
-      <div class="data-row"><span class="dk">Degree 01</span><span class="dv">Intelligent Systems Eng.</span></div>
-      <div class="data-row"><span class="dk">University</span><span class="dv">UASLP, Mexico</span></div>
-      <div class="data-row"><span class="dk">Degree 02</span><span class="dv">BA in Management</span></div>
-      <div class="data-row"><span class="dk">University</span><span class="dv">City Univ. of Seattle</span></div>
-      <div class="data-row"><span class="dk">Location</span><span class="dv">San Luis Potosi, MX</span></div>
-      <div class="data-row"><span class="dk">Languages</span><span class="dv">ES (native) / EN (pro)</span></div>
-      <div class="data-row"><span class="dk">Status</span><span class="dv">Open to internships 2025</span></div>
     </div>
   </div>
 </div>
@@ -847,7 +829,7 @@ footer p {
   <div class="contact-grid">
     <div class="contact-left">
       <h2>OPEN TO<br>INTERNSHIPS.</h2>
-      <p>Looking for software engineering or data opportunities for 2025. Based in San Luis Potosi, open to remote.</p>
+      <p>Looking for software engineering or data opportunities for 2026. Based in San Luis Potosi, open to remote.</p>
     </div>
     <div class="contact-list">
       <a href="mailto:emiliognatividad@gmail.com" class="contact-row">
@@ -877,40 +859,68 @@ footer p {
 
 <footer>
   <p>Diego Emilio Guerrero Natividad / San Luis Potosi, Mexico</p>
-  <p>2025</p>
+  <p>2026</p>
 </footer>
 
+
+
 <script>
-  const cursor = document.getElementById('cursor');
-  const ring = document.getElementById('ring');
-  let mx = 0, my = 0, rx = 0, ry = 0;
+  const bc = document.getElementById('blob-canvas');
+  const bctx = bc.getContext('2d');
+  let bW, bH, bt = 0;
 
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    cursor.style.left = mx + 'px';
-    cursor.style.top = my + 'px';
-  });
+  const blobs = [
+    { x: 0.15, y: 0.5, rx: 0.45, ry: 0.55, alpha: 0.13, speedX: 0.000025, speedY: 0.00002 },
+    { x: 0.75, y: 0.2, rx: 0.38, ry: 0.42, alpha: 0.09, speedX: -0.00002, speedY: 0.00003 },
+    { x: 0.55, y: 0.82, rx: 0.32, ry: 0.38, alpha: 0.08, speedX: 0.00003, speedY: -0.000022 },
+    { x: 0.5,  y: 0.45, rx: 0.28, ry: 0.30, alpha: 0.06, speedX: -0.000015, speedY: 0.000025 },
+  ];
 
-  function animRing() {
-    rx += (mx - rx) * 0.12;
-    ry += (my - ry) * 0.12;
-    ring.style.left = rx + 'px';
-    ring.style.top = ry + 'px';
-    requestAnimationFrame(animRing);
+  function resizeBlob() {
+    bW = bc.width = bc.offsetWidth;
+    bH = bc.height = bc.offsetHeight;
   }
-  animRing();
 
-  document.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      ring.style.transform = 'translate(-50%, -50%) scale(1.6)';
-      ring.style.borderColor = 'rgba(220,215,210,0.5)';
+  function drawBlobs() {
+    bctx.clearRect(0, 0, bW, bH);
+    bt++;
+
+    blobs.forEach((b, i) => {
+      const cx = (b.x + Math.sin(bt * b.speedX * 1000 + i) * 0.18) * bW;
+      const cy = (b.y + Math.cos(bt * b.speedY * 1000 + i) * 0.14) * bH;
+      const baseR = b.rx * Math.min(bW, bH);
+      const points = 8;
+
+      bctx.beginPath();
+      for (let j = 0; j <= points; j++) {
+        const angle = (j / points) * Math.PI * 2;
+        const wobble = 1 + 0.35 * Math.sin(j * 2.3 + bt * b.speedX * 400 + i * 1.7)
+                         + 0.2 * Math.cos(j * 3.7 + bt * b.speedY * 300 + i);
+        const r = baseR * wobble;
+        const px = cx + Math.cos(angle) * r;
+        const py = cy + Math.sin(angle) * r * (b.ry / b.rx);
+        if (j === 0) bctx.moveTo(px, py);
+        else bctx.lineTo(px, py);
+      }
+      bctx.closePath();
+
+      const grad = bctx.createRadialGradient(cx, cy, 0, cx, cy, baseR * 1.4);
+      grad.addColorStop(0, `rgba(255,255,255,${b.alpha})`);
+      grad.addColorStop(0.5, `rgba(255,255,255,${b.alpha * 0.5})`);
+      grad.addColorStop(1, 'rgba(255,255,255,0)');
+
+      bctx.fillStyle = grad;
+      bctx.filter = `blur(${Math.floor(baseR * 0.18)}px)`;
+      bctx.fill();
+      bctx.filter = 'none';
     });
-    el.addEventListener('mouseleave', () => {
-      ring.style.transform = 'translate(-50%, -50%) scale(1)';
-      ring.style.borderColor = 'rgba(220,215,210,0.25)';
-    });
-  });
+
+    requestAnimationFrame(drawBlobs);
+  }
+
+  window.addEventListener('resize', resizeBlob);
+  resizeBlob();
+  drawBlobs();
 </script>
-
 </body>
 </html>
