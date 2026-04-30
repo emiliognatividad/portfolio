@@ -14,7 +14,7 @@
   --glass-border: rgba(255,255,255,0.07);
   --glass-hover: rgba(255,255,255,0.055);
   --text: #ffffff;
-  --muted: rgba(255,255,255,0.6);
+  --muted: rgba(255,255,255,0.9);
   --accent: rgba(220,215,210,0.7);
   --mono: 'DM Mono', monospace;
   --display: 'Bebas Neue', sans-serif;
@@ -75,7 +75,7 @@ body::after {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
   pointer-events: none;
   z-index: 1;
-  opacity: 0.5;
+  opacity: 0.85;
 }
 
 /* NAV */
@@ -96,7 +96,7 @@ nav {
 .nav-id {
   font-family: var(--mono);
   font-size: 10px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.85);
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
@@ -110,7 +110,7 @@ nav {
 .nav-links a {
   font-family: var(--mono);
   font-size: 10px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.85);
   text-decoration: none;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -134,7 +134,7 @@ nav {
 .hero-eyebrow {
   font-family: var(--mono);
   font-size: 10px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.85);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -154,7 +154,7 @@ nav {
 .hero-sub {
   font-family: var(--mono);
   font-size: 11px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.85);
   letter-spacing: 0.08em;
   line-height: 2;
   max-width: 340px;
@@ -197,7 +197,7 @@ nav {
 
 .btn-glass {
   background: var(--glass);
-  color: var(--muted);
+  color: rgba(255,255,255,0.85);
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(12px);
 }
@@ -229,7 +229,7 @@ nav {
 .stat-n {
   font-family: var(--display);
   font-size: 22px;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,1);
   letter-spacing: 0.04em;
   display: block;
 }
@@ -237,7 +237,7 @@ nav {
 .stat-l {
   font-family: var(--mono);
   font-size: 8px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.85);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   display: block;
@@ -255,11 +255,11 @@ nav {
 .sec-label {
   font-family: var(--mono);
   font-size: 9px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.85);
   letter-spacing: 0.22em;
   text-transform: uppercase;
   margin-bottom: 52px;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 /* GLASS CARD */
@@ -291,10 +291,10 @@ nav {
 .card-idx {
   font-family: var(--mono);
   font-size: 9px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.85);
   letter-spacing: 0.18em;
   margin-bottom: 12px;
-  opacity: 0.5;
+  opacity: 0.85;
 }
 
 .card-title {
@@ -308,7 +308,7 @@ nav {
 .card-sub {
   font-family: var(--mono);
   font-size: 10px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.85);
   letter-spacing: 0.08em;
 }
 
@@ -332,23 +332,23 @@ nav {
 .copy-lbl {
   font-family: var(--mono);
   font-size: 9px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.85);
   letter-spacing: 0.18em;
   text-transform: uppercase;
   margin-bottom: 16px;
-  opacity: 0.5;
+  opacity: 0.85;
 }
 
 .card-copy p {
   font-size: 13px;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,1);
   line-height: 2;
   margin-bottom: 12px;
   font-weight: 300;
 }
 
 .card-copy p:last-child { margin-bottom: 0; }
-.card-copy strong { color: rgba(255,255,255,0.95); font-weight: 400; }
+.card-copy strong { color: rgba(255,255,255,1); font-weight: 400; }
 
 .card-metrics {
   padding: 36px 32px;
@@ -362,7 +362,7 @@ nav {
 .m-val {
   font-family: var(--display);
   font-size: 40px;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,1);
   letter-spacing: 0.02em;
   line-height: 1;
 }
@@ -370,10 +370,10 @@ nav {
 .m-lbl {
   font-family: var(--mono);
   font-size: 9px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.85);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 .m-line { height: 1px; background: var(--glass-border); margin: 4px 0; }
@@ -392,7 +392,7 @@ nav {
   border-radius: 100px;
   font-family: var(--mono);
   font-size: 9px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.85);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: all 0.25s;
@@ -415,21 +415,21 @@ nav {
 .ab-lbl {
   font-family: var(--mono);
   font-size: 9px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.85);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   margin-bottom: 10px;
-  opacity: 0.5;
+  opacity: 0.85;
 }
 
 .ab-text {
   font-size: 13px;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,1);
   line-height: 2;
   font-weight: 300;
 }
 
-.ab-text strong { color: rgba(255,255,255,0.95); font-weight: 400; }
+.ab-text strong { color: rgba(255,255,255,1); font-weight: 400; }
 
 .about-right { display: flex; flex-direction: column; gap: 2px; }
 
@@ -451,10 +451,10 @@ nav {
 .dk {
   font-family: var(--mono);
   font-size: 9px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.85);
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  opacity: 0.55;
+  opacity: 0.9;
 }
 
 .dv {
@@ -496,11 +496,11 @@ nav {
 .edu-school {
   font-family: var(--mono);
   font-size: 10px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.85);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 18px;
-  opacity: 0.55;
+  opacity: 0.9;
 }
 
 .edu-badge {
@@ -510,7 +510,7 @@ nav {
   border-radius: 100px;
   font-family: var(--mono);
   font-size: 9px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.85);
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -535,11 +535,11 @@ nav {
 .contact-left p {
   font-family: var(--mono);
   font-size: 11px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.85);
   letter-spacing: 0.06em;
   line-height: 2;
   max-width: 280px;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 .contact-list { display: flex; flex-direction: column; gap: 4px; }
@@ -568,11 +568,11 @@ nav {
 .c-key {
   font-family: var(--mono);
   font-size: 9px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.85);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin-bottom: 2px;
-  opacity: 0.5;
+  opacity: 0.85;
 }
 
 .c-val {
@@ -585,10 +585,10 @@ nav {
 
 .c-arrow {
   font-size: 14px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.85);
   transition: transform 0.25s;
   flex-shrink: 0;
-  opacity: 0.5;
+  opacity: 0.85;
 }
 
 footer {
@@ -606,9 +606,9 @@ footer {
 footer p {
   font-family: var(--mono);
   font-size: 9px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.85);
   letter-spacing: 0.1em;
-  opacity: 0.4;
+  opacity: 0.8;
 }
 
 /* ANIMATIONS */
